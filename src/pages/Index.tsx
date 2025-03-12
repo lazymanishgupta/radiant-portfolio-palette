@@ -7,6 +7,8 @@ import Achievements from '@/components/Achievements';
 import Skills from '@/components/Skills';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
+import WorkExperience from '@/components/WorkExperience';
+import Projects from '@/components/Projects';
 
 const Index = () => {
   useEffect(() => {
@@ -42,6 +44,8 @@ const Index = () => {
       <main>
         <Hero />
         <About />
+        <WorkExperience />
+        <Projects />
         <Achievements />
         <Skills />
         <Contact />

@@ -55,7 +55,7 @@
   }
   
   .badge {
-    @apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium bg-secondary text-primary;
+    @apply inline-flex items-center rounded-full px-3 py-1 text-sm font-medium;
   }
   
   .reveal-on-scroll {
@@ -76,10 +76,6 @@
   
   .section-title {
     @apply text-3xl md:text-4xl font-display font-bold tracking-tight;
-    background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.7));
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
   }
   
   .container-custom {
@@ -100,6 +96,34 @@
   
   .link-hover:hover {
     @apply after:w-full;
+  }
+  
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+  }
+  
+  .gradient-purple-pink {
+    @apply bg-gradient-to-r from-purple-600 to-pink-500;
+  }
+  
+  .gradient-blue-indigo {
+    @apply bg-gradient-to-r from-blue-600 to-indigo-600;
+  }
+  
+  .gradient-teal-blue {
+    @apply bg-gradient-to-r from-teal-500 to-blue-500;
+  }
+  
+  .gradient-rose-pink {
+    @apply bg-gradient-to-r from-rose-500 to-pink-500;
+  }
+  
+  .gradient-amber-orange {
+    @apply bg-gradient-to-r from-amber-500 to-orange-500;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-md hover:-translate-y-1;
   }
 }
 
@@ -124,4 +148,28 @@
 
 ::-webkit-scrollbar-thumb:hover {
   background: rgba(0, 0, 0, 0.2);
+}
+
+/* Animated gradient backgrounds */
+.animated-gradient {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Color transitions */
+.color-transition {
+  transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
 }
