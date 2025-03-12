@@ -5,78 +5,60 @@ import { motion } from 'framer-motion';
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
   
-  useEffect(() => {
-    const handleParallax = () => {
-      if (!heroRef.current) return;
-      const scrollPosition = window.scrollY;
-      const titles = heroRef.current.querySelectorAll('.parallax-title');
-      const subtitle = heroRef.current.querySelector('.parallax-subtitle');
-      
-      titles.forEach((title, index) => {
-        const speed = 0.2 + (index * 0.05);
-        const element = title as HTMLElement;
-        element.style.transform = `translateY(${scrollPosition * speed}px)`;
-      });
-      
-      if (subtitle) {
-        const element = subtitle as HTMLElement;
-        element.style.transform = `translateY(${scrollPosition * 0.1}px)`;
-      }
-    };
-    
-    window.addEventListener('scroll', handleParallax);
-    return () => window.removeEventListener('scroll', handleParallax);
-  }, []);
-  
   return (
     <section 
       id="hero" 
       ref={heroRef} 
-      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{
-        background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)"
+        background: "#234F33" // Dark green background from the inspiration
       }}
     >
-      {/* Animated background elements */}
+      {/* Decorative elements */}
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-0 left-0 w-full h-full">
-          <div className="absolute top-[10%] left-[15%] w-64 h-64 rounded-full bg-blue-300/30 blur-3xl animate-pulse"></div>
-          <div className="absolute top-[40%] right-[10%] w-72 h-72 rounded-full bg-purple-300/30 blur-3xl animate-pulse" style={{ animationDuration: '7s' }}></div>
-          <div className="absolute bottom-[20%] left-[20%] w-56 h-56 rounded-full bg-pink-300/30 blur-3xl animate-pulse" style={{ animationDuration: '8s' }}></div>
-          <div className="absolute top-[60%] right-[25%] w-40 h-40 rounded-full bg-indigo-300/20 blur-2xl animate-pulse" style={{ animationDuration: '5s' }}></div>
-        </div>
+        <div className="absolute top-[10%] right-[5%] w-64 h-64 rounded-full bg-yellow-400/20 blur-3xl"></div>
+        <div className="absolute bottom-[20%] left-[10%] w-72 h-72 rounded-full bg-yellow-400/20 blur-3xl"></div>
       </div>
       
       <div className="container-custom relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 py-12 items-center">
         <div className="order-2 md:order-1">
-          <div 
-            className="mb-4 inline-flex items-center rounded-full px-4 py-1.5 text-sm font-semibold backdrop-blur-md" 
-            style={{ 
-              background: "rgba(255, 255, 255, 0.2)",
-              border: "1px solid rgba(255, 255, 255, 0.3)",
-              color: "white"
-            }}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="mb-4 inline-flex items-center rounded-full px-4 py-1.5 text-sm font-semibold bg-yellow-400 text-green-900"
           >
             Lead Product Designer
-          </div>
+          </motion.div>
           
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-6 leading-tight text-white">
-            <span className="block parallax-title">Manish</span>
-            <span className="block parallax-title gradient-text bg-gradient-to-r from-yellow-200 to-yellow-50">Kumar</span>
-          </h1>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight mb-6 leading-tight"
+          >
+            <span className="block text-white">I'm</span>
+            <span className="block text-yellow-400">Manish Kumar</span>
+          </motion.h1>
           
-          <p className="text-xl md:text-2xl max-w-2xl mb-10 parallax-subtitle text-white/90">
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.4 }}
+            className="text-xl md:text-2xl max-w-2xl mb-10 text-white/90"
+          >
             Crafting user-centric digital experiences with 8+ years of expertise in UX strategy, research, and interaction design.
-          </p>
+          </motion.p>
           
-          <div className="flex flex-col sm:flex-row items-center justify-start gap-4">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.6 }}
+            className="flex flex-col sm:flex-row items-center justify-start gap-4"
+          >
             <a 
               href="#about" 
-              className="px-6 py-3 rounded-full font-medium transition-all hover:-translate-y-1 duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 hover:shadow-lg w-full sm:w-auto text-center"
-              style={{
-                background: "linear-gradient(90deg, #FF9A9E 0%, #FAD0C4 100%)",
-                color: "white"
-              }}
+              className="px-6 py-3 rounded-full font-medium transition-all hover:-translate-y-1 duration-300 focus:outline-none bg-yellow-400 text-green-900 hover:shadow-lg w-full sm:w-auto text-center"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
@@ -86,12 +68,7 @@ const Hero = () => {
             </a>
             <a 
               href="#contact" 
-              className="px-6 py-3 rounded-full font-medium transition-all hover:-translate-y-1 duration-300 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 hover:shadow-lg backdrop-blur-md w-full sm:w-auto text-center"
-              style={{
-                background: "rgba(255, 255, 255, 0.2)",
-                color: "white",
-                border: "1px solid rgba(255, 255, 255, 0.3)"
-              }}
+              className="px-6 py-3 rounded-full font-medium transition-all hover:-translate-y-1 duration-300 focus:outline-none bg-transparent border-2 border-yellow-400 text-yellow-400 hover:shadow-lg w-full sm:w-auto text-center"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
@@ -99,13 +76,21 @@ const Hero = () => {
             >
               Get in touch
             </a>
-          </div>
+          </motion.div>
         </div>
         
-        <div className="order-1 md:order-2 flex justify-center md:justify-end items-center">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="order-1 md:order-2 flex justify-center md:justify-end items-center"
+        >
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-pink-500 to-indigo-500 blur-lg opacity-70 animate-pulse" style={{ animationDuration: '3s' }}></div>
-            <div className="relative h-64 w-64 md:h-80 md:w-80 rounded-full overflow-hidden border-4 border-white/30 shadow-2xl">
+            {/* Yellow circle behind the image */}
+            <div className="absolute inset-0 -left-4 -top-4 w-[calc(100%+32px)] h-[calc(100%+32px)] rounded-full bg-yellow-400"></div>
+            
+            {/* Circular image container */}
+            <div className="relative h-64 w-64 md:h-80 md:w-80 rounded-full overflow-hidden border-8 border-white">
               <img 
                 src="/manish-kumar.jpg" 
                 alt="Manish Kumar" 
@@ -118,25 +103,57 @@ const Hero = () => {
             </div>
             
             {/* Floating badges */}
-            <div className="absolute -top-4 -right-4 px-3 py-2 rounded-full text-xs font-semibold bg-white shadow-lg text-purple-900">
+            <motion.div 
+              initial={{ x: -20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.5 }}
+              className="absolute -bottom-4 -left-4 px-3 py-2 rounded-full text-xs font-semibold bg-white shadow-lg text-green-900"
+            >
               UX Strategy
-            </div>
-            <div className="absolute -bottom-4 -left-4 px-3 py-2 rounded-full text-xs font-semibold bg-white shadow-lg text-purple-900">
+            </motion.div>
+            <motion.div 
+              initial={{ x: 20, opacity: 0 }}
+              animate={{ x: 0, opacity: 1 }}
+              transition={{ delay: 1, duration: 0.5 }}
+              className="absolute -top-4 -right-4 px-3 py-2 rounded-full text-xs font-semibold bg-white shadow-lg text-green-900"
+            >
               Design Systems
-            </div>
-            <div className="absolute top-1/2 -right-8 transform -translate-y-1/2 px-3 py-2 rounded-full text-xs font-semibold bg-white shadow-lg text-purple-900">
+            </motion.div>
+            <motion.div 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 1.2, duration: 0.5 }}
+              className="absolute top-1/2 -right-8 transform -translate-y-1/2 px-3 py-2 rounded-full text-xs font-semibold bg-white shadow-lg text-green-900"
+            >
               Prototyping
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
       
-      {/* Animated mouse scroll indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 rounded-full border-2 border-white/70 flex items-center justify-center">
-          <div className="w-1.5 h-1.5 rounded-full bg-white/80 animate-fade-down"></div>
+      {/* Arrow down indicator */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.4, duration: 0.5 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce"
+      >
+        <div className="w-8 h-8 rounded-full bg-yellow-400 flex items-center justify-center">
+          <svg 
+            xmlns="http://www.w3.org/2000/svg" 
+            width="20" 
+            height="20" 
+            viewBox="0 0 24 24" 
+            fill="none" 
+            stroke="#234F33" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+          >
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };
