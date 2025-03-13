@@ -55,13 +55,13 @@ const Contact = () => {
   ];
   
   return (
-    <section id="contact" ref={sectionRef} className="py-20 md:py-28 bg-primary text-white">
+    <section id="contact" ref={sectionRef} className="py-20 md:py-28 bg-black text-white">
       <div className="container-custom">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-16 reveal-on-scroll">
             <span className="badge bg-white/20 text-white mb-3">Get in Touch</span>
             <h2 className="text-3xl md:text-4xl font-display font-bold tracking-tight mb-5">Let's Connect!</h2>
-            <p className="text-lg text-white/80 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
               I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
             </p>
           </div>
@@ -73,24 +73,24 @@ const Contact = () => {
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="reveal-on-scroll bg-white/10 backdrop-blur p-6 rounded-xl border border-white/20 flex flex-col items-center text-center transition-all duration-300 hover:bg-white/15 hover:-translate-y-1"
+                className="reveal-on-scroll bg-gray-900 p-6 rounded-xl border border-gray-800 flex flex-col items-center text-center transition-all duration-300 hover:bg-gray-800 hover:-translate-y-1"
               >
-                <div className="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center mb-4">
+                <div className="h-12 w-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
                   <link.icon size={20} />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{link.type}</h3>
-                <p className="text-white/80">{link.value}</p>
+                <p className="text-gray-400">{link.value}</p>
               </a>
             ))}
           </div>
           
           <div className="mt-16 text-center reveal-on-scroll">
-            <p className="text-white/80 mb-6">
+            <p className="text-gray-400 mb-6">
               Looking for a passionate designer to help bring your vision to life? I'd love to hear from you.
             </p>
             <a 
               href="mailto:hello@manishkumar.design"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-primary font-medium transition-all hover:bg-white/90 hover:-translate-y-0.5 duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-primary"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-black font-medium transition-all hover:bg-gray-200 hover:-translate-y-0.5 duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black"
             >
               Say Hello
             </a>

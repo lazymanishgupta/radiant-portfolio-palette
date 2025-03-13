@@ -31,7 +31,7 @@ const Header = () => {
     <header 
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out py-4 px-6 md:px-8",
-        isScrolled ? "bg-white/80 backdrop-blur-lg shadow-sm" : "bg-transparent"
+        isScrolled ? "bg-white text-black shadow-sm" : "bg-transparent text-white"
       )}
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
@@ -53,23 +53,27 @@ const Header = () => {
             aria-label="Toggle menu"
           >
             <div className={cn(
-              "w-6 h-0.5 bg-foreground transition-all duration-300 ease-in-out",
+              "w-6 h-0.5 transition-all duration-300 ease-in-out",
+              isScrolled ? "bg-black" : "bg-white",
               isMobileMenuOpen && "rotate-45 translate-y-[5px]"
             )}></div>
             <div className={cn(
-              "w-6 h-0.5 bg-foreground my-1.5 transition-all duration-300 ease-in-out",
+              "w-6 h-0.5 my-1.5 transition-all duration-300 ease-in-out",
+              isScrolled ? "bg-black" : "bg-white",
               isMobileMenuOpen && "opacity-0"
             )}></div>
             <div className={cn(
-              "w-6 h-0.5 bg-foreground transition-all duration-300 ease-in-out",
+              "w-6 h-0.5 transition-all duration-300 ease-in-out",
+              isScrolled ? "bg-black" : "bg-white",
               isMobileMenuOpen && "-rotate-45 -translate-y-[5px]"
             )}></div>
           </button>
         </div>
         
         <nav className={cn(
-          "fixed md:static md:flex top-[60px] left-0 w-full md:w-auto bg-white/90 md:bg-transparent backdrop-blur-md md:backdrop-blur-none transition-all duration-300 ease-in-out",
+          "fixed md:static md:flex top-[60px] left-0 w-full md:w-auto bg-white md:bg-transparent md:backdrop-blur-none transition-all duration-300 ease-in-out",
           "flex-col md:flex-row items-center gap-6 md:gap-8 py-6 md:py-0 shadow-sm md:shadow-none",
+          "text-black md:text-inherit",
           isMobileMenuOpen ? "translate-y-0 opacity-100" : "-translate-y-full md:translate-y-0 opacity-0 md:opacity-100 pointer-events-none md:pointer-events-auto"
         )}>
           {["about", "achievements", "skills", "contact"].map((section) => (

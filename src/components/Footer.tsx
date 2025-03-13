@@ -6,20 +6,20 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="py-10 md:py-12 bg-gradient-to-r from-purple-900 to-indigo-900 text-white">
+    <footer className="py-10 md:py-12 bg-black text-white">
       <div className="container-custom">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-display font-bold mb-4">Manish Kumar</h3>
-            <p className="text-purple-200 mb-4">Lead Product Designer crafting user-centric experiences across multiple industries</p>
+            <p className="text-gray-400 mb-4">Lead Product Designer crafting user-centric experiences across multiple industries</p>
             <div className="flex space-x-4">
-              <a href="https://linkedin.com/in/LazyMarkin" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors">
+              <a href="https://linkedin.com/in/LazyMarkin" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="mailto:Designermanishk@gmail.com" className="hover:text-purple-300 transition-colors">
+              <a href="mailto:Designermanishk@gmail.com" className="hover:text-gray-300 transition-colors">
                 <Mail size={20} />
               </a>
-              <a href="https://behance.net/LazyMarkin" target="_blank" rel="noopener noreferrer" className="hover:text-purple-300 transition-colors">
+              <a href="https://behance.net/LazyMarkin" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors">
                 <FileText size={20} />
               </a>
             </div>
@@ -32,7 +32,7 @@ const Footer = () => {
                 <a 
                   key={item} 
                   href={`#${item.toLowerCase()}`}
-                  className="text-purple-200 hover:text-white transition-colors py-1"
+                  className="text-gray-400 hover:text-white transition-colors py-1"
                   onClick={(e) => {
                     e.preventDefault();
                     document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' });
@@ -46,15 +46,15 @@ const Footer = () => {
           
           <div>
             <h3 className="text-lg font-semibold mb-4">Get In Touch</h3>
-            <p className="text-purple-200 mb-2">Designermanishk@gmail.com</p>
-            <p className="text-purple-200">LinkedIn: LazyMarkin</p>
+            <p className="text-gray-400 mb-2">Designermanishk@gmail.com</p>
+            <p className="text-gray-400">LinkedIn: LazyMarkin</p>
           </div>
         </div>
         
-        <div className="pt-6 border-t border-purple-700/50">
+        <div className="pt-6 border-t border-gray-800">
           <div className="flex flex-col md:flex-row md:justify-between items-center">
             <div className="mb-4 md:mb-0">
-              <p className="text-sm text-purple-300">
+              <p className="text-sm text-gray-500">
                 © {currentYear} Manish Kumar. All rights reserved.
               </p>
             </div>
@@ -64,7 +64,7 @@ const Footer = () => {
                 <a 
                   key={item} 
                   href="#"
-                  className="text-sm text-purple-300 hover:text-white transition-colors duration-200"
+                  className="text-sm text-gray-500 hover:text-white transition-colors duration-200"
                 >
                   {item}
                 </a>
