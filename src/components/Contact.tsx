@@ -66,16 +66,16 @@ const Contact = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {contactLinks.map((link, index) => (
               <a 
                 key={index}
                 href={link.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="reveal-on-scroll bg-gray-900 p-6 rounded-xl border border-gray-800 flex flex-col items-center text-center transition-all duration-300 hover:bg-gray-800 hover:-translate-y-1"
+                className="reveal-on-scroll bg-white/5 border border-white/10 p-6 rounded-xl flex flex-col items-center text-center transition-all duration-300 hover:bg-white/10"
               >
-                <div className="h-12 w-12 rounded-full bg-gray-800 flex items-center justify-center mb-4">
+                <div className="h-12 w-12 rounded-full bg-white/10 flex items-center justify-center mb-4">
                   <link.icon size={20} />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">{link.type}</h3>
@@ -90,7 +90,7 @@ const Contact = () => {
             </p>
             <a 
               href="mailto:hello@manishkumar.design"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-white text-black font-medium transition-all hover:bg-gray-200 hover:-translate-y-0.5 duration-300 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 focus:ring-offset-black"
+              className="inline-flex items-center justify-center px-8 py-3 rounded-lg border border-white/20 text-white font-medium transition-all hover:bg-white hover:text-black duration-300"
             >
               Say Hello
             </a>

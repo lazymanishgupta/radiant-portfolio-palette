@@ -31,7 +31,7 @@ const Header = () => {
     <header 
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out py-4 px-6 md:px-8",
-        isScrolled ? "bg-white text-black shadow-sm" : "bg-transparent text-white"
+        isScrolled ? "bg-white text-black" : "bg-transparent text-white"
       )}
     >
       <div className="max-w-[1200px] mx-auto flex items-center justify-between">
@@ -43,7 +43,7 @@ const Header = () => {
             scrollToSection('hero');
           }}
         >
-          Manish Kumar
+          MK.
         </a>
         
         <div className="md:hidden">
@@ -80,7 +80,7 @@ const Header = () => {
             <a 
               key={section}
               href={`#${section}`}
-              className="capitalize font-medium link-hover"
+              className="capitalize text-sm font-medium transition-colors duration-200 hover:opacity-70"
               onClick={(e) => {
                 e.preventDefault();
                 scrollToSection(section);

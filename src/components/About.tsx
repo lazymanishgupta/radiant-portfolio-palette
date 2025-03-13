@@ -48,12 +48,12 @@ const About = () => {
   ];
   
   return (
-    <section id="about" ref={sectionRef} className="py-20 md:py-28 bg-gradient-to-b from-white to-purple-50">
+    <section id="about" ref={sectionRef} className="py-20 md:py-28 bg-white text-black">
       <div className="container-custom">
         <div className="max-w-5xl mx-auto">
-          <div className="reveal-on-scroll">
-            <span className="badge bg-purple-100 text-purple-700 mb-3">About Me</span>
-            <h2 className="section-title mb-8 bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">My Design Journey</h2>
+          <div className="reveal-on-scroll mb-16">
+            <span className="badge bg-black/10 text-black mb-3">About Me</span>
+            <h2 className="section-title mb-8">My Design Journey</h2>
           </div>
           
           <div className="grid md:grid-cols-12 gap-12 md:gap-16">
@@ -74,11 +74,11 @@ const About = () => {
                 {philosophyPoints.map((point, index) => (
                   <div 
                     key={index} 
-                    className="reveal-on-scroll bg-white p-5 md:p-6 rounded-xl border border-purple-200 shadow-sm hover:shadow-md transition-all duration-300 hover:border-purple-300 hover:translate-y-[-4px]"
+                    className="reveal-on-scroll bg-gray-50 p-5 md:p-6 rounded-xl border border-gray-200 hover:shadow-md transition-all duration-300 hover:translate-y-[-4px]"
                   >
                     <div className="flex items-start gap-3">
-                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white">
-                        🔹
+                      <div className="flex-shrink-0 w-10 h-10 rounded-full bg-black text-white flex items-center justify-center text-sm">
+                        0{index + 1}
                       </div>
                       <div>
                         <h3 className="text-xl font-display font-semibold mb-2 text-gray-800">{point.title}</h3>
@@ -92,7 +92,7 @@ const About = () => {
           </div>
           
           <div className="mt-16 flex justify-center reveal-on-scroll">
-            <div className="max-w-md text-center p-6 bg-gradient-to-r from-purple-100 to-pink-100 rounded-2xl">
+            <div className="max-w-md text-center p-6 bg-gray-100 rounded-2xl">
               <h3 className="text-xl font-display font-semibold mb-3 text-gray-800">What Drives Me?</h3>
               <p className="text-gray-700">
                 I am passionate about mentoring designers, creating design systems, and building user-centric products that drive business success. Constantly exploring the latest in AI, UX trends, and emerging tech, I aim to elevate user experiences across industries.

@@ -6,12 +6,15 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
   
   return (
-    <footer className="py-6 bg-black text-white">
+    <footer className="py-8 bg-black text-white border-t border-white/10">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-gray-400">
-            © {currentYear} Manish Kumar. All rights reserved.
-          </p>
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center gap-2">
+            <span className="text-lg font-bold">MK.</span>
+            <span className="text-sm text-gray-400">
+              © {currentYear} Manish Kumar
+            </span>
+          </div>
           
           <div className="flex items-center gap-6">
             {["About", "Experience", "Education", "Projects", "Skills", "Contact"].map((item) => (
