@@ -9,6 +9,7 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WorkExperience from '@/components/WorkExperience';
 import Projects from '@/components/Projects';
+import Education from '@/components/Education';
 
 const Index = () => {
   useEffect(() => {
@@ -45,6 +46,7 @@ const Index = () => {
         <Hero />
         <About />
         <WorkExperience />
+        <Education />
         <Projects />
         <Achievements />
         <Skills />
