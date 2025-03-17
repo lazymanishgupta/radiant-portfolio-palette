@@ -57,26 +57,26 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" ref={sectionRef} className="py-20 md:py-28 bg-black text-white">
+    <section id="projects" ref={sectionRef} className="py-20 md:py-28 bg-[#F2FCE2] text-gray-800">
       <div className="container-custom">
         <div className="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
-          <span className="badge bg-white/20 text-white mb-3">Featured Projects</span>
+          <span className="badge bg-gray-800/20 text-gray-800 mb-3">Featured Projects</span>
           <h2 className="section-title mb-6">Design Case Studies</h2>
-          <p className="text-gray-400">Solving complex problems through user-centered design</p>
+          <p className="text-gray-600">Solving complex problems through user-centered design</p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6">
           {featuredProjects.map((project, index) => (
             <div 
               key={index} 
-              className="reveal-on-scroll group bg-white/5 border border-white/10 rounded-xl p-6 transition-all duration-300 hover:bg-white/10"
+              className="reveal-on-scroll group bg-white/80 border border-gray-300/30 rounded-xl p-6 transition-all duration-300 hover:bg-white hover:shadow-lg"
             >
               <div className="flex items-center justify-between mb-4">
-                <span className="text-4xl font-bold text-white/40">{project.number}</span>
+                <span className="text-4xl font-bold text-gray-800/40">{project.number}</span>
                 <ArrowRight size={20} className="opacity-0 group-hover:opacity-100 transition-all duration-300" />
               </div>
-              <h3 className="text-xl font-display font-semibold mb-3 text-white">{project.title}</h3>
-              <p className="text-gray-400">{project.description}</p>
+              <h3 className="text-xl font-display font-semibold mb-3 text-gray-800">{project.title}</h3>
+              <p className="text-gray-600">{project.description}</p>
             </div>
           ))}
         </div>
