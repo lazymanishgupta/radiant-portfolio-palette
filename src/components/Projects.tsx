@@ -69,7 +69,7 @@ const Projects = () => {
           {featuredProjects.map((project, index) => (
             <div 
               key={index} 
-              className="reveal-on-scroll group bg-white/80 border border-gray-300/30 rounded-xl p-6 transition-all duration-300 hover:bg-white hover:shadow-lg"
+              className="reveal-on-scroll group bg-white shadow-sm border border-gray-300/30 rounded-xl p-6 transition-all duration-300 hover:shadow-md"
             >
               <div className="flex items-center justify-between mb-4">
                 <span className="text-4xl font-bold text-gray-800/40">{project.number}</span>
