@@ -1,4 +1,3 @@
-
 import React, { useEffect, useRef } from 'react';
 import { ArrowRight } from 'lucide-react';
 
@@ -50,8 +49,8 @@ const Hero = () => {
                 Lead Product Designer
               </span>
               
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-tight animate-fade-in" style={{ animationDelay: '0.5s' }}>
-                <span className="parallax-title nowrap">Manish Kumar</span>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-tight animate-fade-in whitespace-nowrap" style={{ animationDelay: '0.5s' }}>
+                <span className="parallax-title">Manish Kumar</span>
               </h1>
             </div>
             
@@ -91,17 +90,14 @@ const Hero = () => {
           
           <div className="hidden md:flex justify-center items-center animate-fade-in" style={{ animationDelay: '1s' }}>
             <div className="relative">
-              {/* Floating UI/UX design elements */}
               <div className="absolute -top-8 -left-12 w-16 h-16 bg-purple-500/30 rounded-full blur-xl animate-pulse"></div>
               <div className="absolute -bottom-10 -right-8 w-20 h-20 bg-red-500/30 rounded-full blur-xl animate-[pulse_3s_ease-in-out_infinite]"></div>
               <div className="absolute top-1/2 -left-16 w-12 h-12 bg-blue-500/30 rounded-full blur-xl animate-[pulse_4s_ease-in-out_infinite]"></div>
               
-              {/* Design elements */}
               <div className="absolute -top-4 -right-8 w-12 h-12 border-2 border-gray-800/20 rounded-full"></div>
               <div className="absolute -bottom-8 -left-12 w-16 h-16 border border-gray-800/30 rounded-lg rotate-12"></div>
               <div className="absolute top-1/3 -right-14 w-8 h-8 border border-red-500/40 rounded-sm rotate-45"></div>
               
-              {/* Additional UI/UX elements */}
               <div className="absolute top-1/4 -left-20 w-10 h-10 bg-yellow-400/20 rounded-md rotate-12"></div>
               <div className="absolute -bottom-12 -right-14 w-14 h-14 bg-blue-400/10 rounded-lg rotate-45"></div>
               <div className="absolute -top-12 left-10 w-6 h-6 bg-green-400/20 rounded-full"></div>

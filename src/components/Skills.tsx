@@ -72,32 +72,38 @@ const Skills = () => {
     {
       stage: "Research",
       description: "Understand user needs and business goals through interviews and data analysis",
-      icon: "📊"
+      icon: "🔍",
+      color: "bg-blue-100"
     },
     {
       stage: "Strategy",
       description: "Define clear objectives and plan the design approach based on research insights",
-      icon: "🧠"
+      icon: "🧠",
+      color: "bg-purple-100"
     },
     {
       stage: "Wireframing",
       description: "Create low-fidelity layouts to establish content hierarchy and user flows",
-      icon: "✏️"
+      icon: "📝",
+      color: "bg-green-100"
     },
     {
       stage: "Prototyping",
       description: "Build interactive models to test functionality and user experience",
-      icon: "🔄"
+      icon: "⚙️",
+      color: "bg-yellow-100"
     },
     {
       stage: "Testing",
       description: "Validate designs with real users and collect feedback for improvements",
-      icon: "🧪"
+      icon: "🧪",
+      color: "bg-red-100"
     },
     {
       stage: "Implementation",
       description: "Collaborate with developers to ensure design fidelity and successful delivery",
-      icon: "🚀"
+      icon: "🚀",
+      color: "bg-cyan-100"
     }
   ];
   
@@ -141,19 +147,21 @@ const Skills = () => {
           
           <div className="mt-20 reveal-on-scroll">
             <div className="bg-gray-50 border border-gray-200 rounded-xl p-8">
-              <h3 className="text-xl font-display font-semibold mb-8 text-center">Design Process</h3>
+              <h3 className="text-xl font-display font-semibold mb-8 text-center">My Design Process</h3>
               
               <div className="relative">
-                <div className="hidden md:block absolute top-1/2 left-0 right-0 h-1 bg-gray-200 -translate-y-1/2"></div>
+                <div className="hidden md:block absolute top-1/2 left-12 right-12 h-1 bg-gradient-to-r from-blue-200 via-purple-200 to-red-200 -translate-y-1/2 rounded-full"></div>
                 <div className="grid grid-cols-2 md:grid-cols-6 gap-8">
                   {designProcess.map((stage, index) => (
                     <div key={index} className="flex flex-col items-center relative">
-                      <div className="h-16 w-16 rounded-full bg-white shadow-md border border-gray-100 text-3xl flex items-center justify-center mb-4 z-10">
+                      <div className={`h-16 w-16 rounded-full ${stage.color} shadow-md border border-gray-100 text-3xl flex items-center justify-center mb-4 z-10`}>
                         {stage.icon}
                       </div>
                       <span className="text-md font-semibold text-center mb-2">{stage.stage}</span>
                       <p className="text-xs text-gray-600 text-center">{stage.description}</p>
-                      <span className="hidden md:block absolute top-[32px] right-[-18px] text-xl text-gray-300 z-20">→</span>
+                      {index < designProcess.length - 1 && (
+                        <span className="hidden md:block absolute top-[32px] right-[-18px] text-xl text-gray-400 z-20 font-bold">→</span>
+                      )}
                     </div>
                   ))}
                 </div>

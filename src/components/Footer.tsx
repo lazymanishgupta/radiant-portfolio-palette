@@ -44,10 +44,6 @@ const Footer = () => {
             </a>
           </div>
         </div>
-        
-        <div className="text-center pt-8 border-t border-white/10">
-          <p className="text-gray-400 text-sm">Designed and built with ❤️ by Manish Kumar</p>
-        </div>
       </div>
     </footer>
   );

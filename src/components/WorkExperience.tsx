@@ -43,7 +43,7 @@ const WorkExperience = () => {
       contributions: [
         "ACM & eACM Systems: Designed platforms for pilots and engineers to manage flight privileges efficiently.",
         "Lifestyle Bidding: Enabled cabin crew to set personalized leave preferences, improving work-life balance.",
-        "Roster Management: Developed an intuitive system to optimize crew scheduling, reducing conflicts.",
+        "Roster Management: Pilots can check roster easily for the month.",
         "Approval Workflows: Streamlined leave, appraisal, and training approvals, improving process efficiency.",
         "Enterprise Design System: Established scalable UI/UX frameworks for seamless brand consistency."
       ],
@@ -65,12 +65,28 @@ const WorkExperience = () => {
     {
       company: "QA InfoTech",
       position: "Product Designer",
-      period: "April 2020 - June 2022"
+      period: "April 2020 - June 2022",
+      challenge: "Organizations needed intuitive digital solutions across healthcare, entertainment, and verification sectors.",
+      solution: "Designed user-centric experiences for diverse platforms, focusing on intuitive workflows and visual design.",
+      contributions: [
+        "All Scripts: Improved EHR workflows, ensuring HIPAA compliance.",
+        "Phando & Phunflix: Enhanced content discovery & video streaming experiences.",
+        "Validate ME: Optimized background verification processes for recruiters."
+      ],
+      impact: "Increased user satisfaction, streamlined workflows, and improved operational efficiency across platforms."
     },
     {
       company: "Website Toolbox",
       position: "Web Designer",
-      period: "July 2016 - March 2020"
+      period: "July 2016 - March 2020",
+      challenge: "Communities needed engaging, functional online spaces for member interaction and discussion.",
+      solution: "Designed forums, landing pages, and community experiences using HTML, LESS, and SASS.",
+      contributions: [
+        "Conducted user research and prototyping, ensuring scalable web solutions.",
+        "Created responsive layouts that enhanced community engagement and interaction.",
+        "Implemented design systems that maintained consistency across forum platforms."
+      ],
+      impact: "Improved user engagement metrics and community participation through intuitive, accessible interfaces."
     }
   ];
 
@@ -105,46 +121,40 @@ const WorkExperience = () => {
                   </div>
                 </div>
                 
-                {index < 2 && (
-                  <div className="md:col-span-8 bg-white shadow-sm border border-gray-200/50 p-6 rounded-xl">
-                    <div className="mb-4">
-                      <h4 className="text-lg font-semibold text-gray-800 mb-2">Challenge:</h4>
-                      <p className="text-gray-600">{exp.challenge}</p>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <h4 className="text-lg font-semibold text-gray-800 mb-2">Solution:</h4>
-                      <p className="text-gray-600">{exp.solution}</p>
-                    </div>
-                    
-                    <div className="mb-4">
-                      <h4 className="text-lg font-semibold text-gray-800 mb-2">Key Contributions:</h4>
-                      <ul className="space-y-2">
-                        {exp.contributions?.map((contribution, i) => (
-                          <li key={i} className="flex items-start">
-                            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gray-100 text-gray-600 mr-2 mt-0.5">
-                              <Check size={12} />
-                            </span>
-                            <span className="text-gray-600">{contribution}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    
-                    <div>
-                      <h4 className="text-lg font-semibold text-gray-800 mb-2">Impact:</h4>
-                      <p className="text-gray-600">{exp.impact}</p>
-                    </div>
-                  </div>
-                )}
-                
-                {index >= 2 && (
-                  <div className="md:col-span-8 bg-white shadow-sm border border-gray-200/50 p-6 rounded-xl">
-                    <div className="text-center py-4">
-                      <p className="text-gray-600">View more details about my work at {exp.company}</p>
-                    </div>
-                  </div>
-                )}
+                <div className="md:col-span-8 bg-white shadow-sm border border-gray-200/50 p-6 rounded-xl">
+                  {index < 4 && (
+                    <>
+                      <div className="mb-4">
+                        <h4 className="text-lg font-semibold text-gray-800 mb-2">Challenge:</h4>
+                        <p className="text-gray-600">{exp.challenge}</p>
+                      </div>
+                      
+                      <div className="mb-4">
+                        <h4 className="text-lg font-semibold text-gray-800 mb-2">Solution:</h4>
+                        <p className="text-gray-600">{exp.solution}</p>
+                      </div>
+                      
+                      <div className="mb-4">
+                        <h4 className="text-lg font-semibold text-gray-800 mb-2">Key Contributions:</h4>
+                        <ul className="space-y-2">
+                          {exp.contributions?.map((contribution, i) => (
+                            <li key={i} className="flex items-start">
+                              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-gray-100 text-gray-600 mr-2 mt-0.5">
+                                <Check size={12} />
+                              </span>
+                              <span className="text-gray-600">{contribution}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                      
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-800 mb-2">Impact:</h4>
+                        <p className="text-gray-600">{exp.impact}</p>
+                      </div>
+                    </>
+                  )}
+                </div>
               </div>
             </div>
           ))}
