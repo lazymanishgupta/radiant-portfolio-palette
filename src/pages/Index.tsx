@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import LogoMarquee from '@/components/LogoMarquee';
 import About from '@/components/About';
 import Achievements from '@/components/Achievements';
 import Skills from '@/components/Skills';
@@ -44,6 +45,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <LogoMarquee />
         <About />
         <WorkExperience />
         <Education />

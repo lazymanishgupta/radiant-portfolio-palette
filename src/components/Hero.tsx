@@ -49,7 +49,7 @@ const Hero = () => {
                 Lead Product Designer
               </span>
               
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-tight animate-fade-in whitespace-nowrap" style={{ animationDelay: '0.5s' }}>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-none animate-fade-in whitespace-nowrap" style={{ animationDelay: '0.5s' }}>
                 <span className="parallax-title">Manish Kumar</span>
               </h1>
             </div>
