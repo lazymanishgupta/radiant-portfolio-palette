@@ -35,13 +35,13 @@ const LogoMarquee = () => {
   }, []);
   
   const companies = [
-    { name: "Air India", logo: "/lovable-uploads/c283c289-28a2-4957-95ce-65e5592b1eeb.png" },
-    { name: "EY", logo: "/lovable-uploads/eec3e346-0d75-44b8-8c22-9f0a152af6b5.png" },
-    { name: "IDFC First Bank", logo: "/lovable-uploads/cde829da-d74c-42cf-b1ae-55c0078c636d.png" },
-    { name: "ICICI Bank", logo: "/lovable-uploads/15853a10-2345-4142-8828-1ed684b666d4.png" },
-    { name: "Qualitest", logo: "/lovable-uploads/4a3509f8-ac23-43c1-b278-f67a9fd5d416.png" },
-    { name: "Website Toolbox", logo: "/lovable-uploads/1d46c1f0-272d-4f43-94c0-7acc4efec7e6.png" },
-    { name: "Shimply", logo: "/lovable-uploads/c283c289-28a2-4957-95ce-65e5592b1eeb.png" }, // Reusing first image as placeholder
+    { name: "Air India", logo: "/lovable-uploads/b0aed015-7aea-474a-9d1b-d9f64532d901.png" },
+    { name: "EY", logo: "/lovable-uploads/ff840849-8cc1-4e91-a28c-c575b485eaea.png" },
+    { name: "IDFC First Bank", logo: "/lovable-uploads/ed2533d5-42be-48eb-8033-9a71e2d39f12.png" },
+    { name: "ICICI Bank", logo: "/lovable-uploads/e9cbca5a-56f3-49c4-a00e-c276c96a8038.png" },
+    { name: "Qualitest", logo: "/lovable-uploads/3d511f04-96bf-4935-8d1c-61cc117a0497.png" },
+    { name: "Website Toolbox", logo: "/lovable-uploads/fbea0886-dee2-47fe-8747-f8649bc9763c.png" },
+    { name: "Shimply", logo: "/lovable-uploads/d093b5ac-4d5d-4427-84eb-e242b3dd7588.png" },
   ];
   
   // Duplicate the array to create a seamless loop
@@ -60,7 +60,7 @@ const LogoMarquee = () => {
               <img 
                 src={company.logo} 
                 alt={`${company.name} logo`} 
-                className="h-10 md:h-12 w-auto object-contain brightness-0 invert"
+                className="h-12 md:h-14 w-auto object-contain brightness-0 invert"
               />
             </div>
           ))}
