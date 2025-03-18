@@ -60,14 +60,14 @@ const Hero = () => {
                 Lead Product Designer
               </span>
               
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-none animate-fade-in whitespace-nowrap" style={{ animationDelay: '0.5s' }}>
-                <span className="parallax-title">Manish Kumar</span>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-none animate-fade-in" style={{ animationDelay: '0.5s' }}>
+                <span className="parallax-title whitespace-nowrap">Manish Kumar</span>
               </h1>
             </div>
             
             <div className="grid md:grid-cols-1 gap-8 md:gap-12">
               <div className="animate-fade-up" style={{ animationDelay: '0.7s' }}>
-                <p className="text-base md:text-lg text-gray-400 parallax-subtitle">
+                <p className="text-sm md:text-base text-gray-400 parallax-subtitle">
                   Crafting user-centric digital experiences with 8+ years of expertise in UX strategy, research, and interaction design.
                 </p>
               </div>
@@ -75,13 +75,13 @@ const Hero = () => {
             
             <div className="mt-8 animate-fade-up" style={{ animationDelay: '0.9s' }}>
               <h3 className="text-sm font-medium text-gray-300 mb-3">Companies I have worked with</h3>
-              <div className="flex flex-nowrap gap-4 items-center overflow-x-auto">
+              <div className="grid grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
                 {companies.map((company, index) => (
-                  <div key={index} className="flex-shrink-0">
+                  <div key={index} className="flex items-center justify-center">
                     <img 
                       src={company.logo} 
                       alt={`${company.name} logo`} 
-                      className="h-6 w-auto object-contain"
+                      className="h-5 w-auto object-contain"
                     />
                   </div>
                 ))}
