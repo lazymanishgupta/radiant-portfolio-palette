@@ -1,5 +1,5 @@
+
 import React, { useEffect, useRef } from 'react';
-import { ArrowRight } from 'lucide-react';
 
 const Hero = () => {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -27,6 +27,16 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', handleParallax);
   }, []);
   
+  const companies = [
+    { name: "Air India", logo: "/lovable-uploads/b0aed015-7aea-474a-9d1b-d9f64532d901.png" },
+    { name: "EY", logo: "/lovable-uploads/ff840849-8cc1-4e91-a28c-c575b485eaea.png" },
+    { name: "IDFC First Bank", logo: "/lovable-uploads/ed2533d5-42be-48eb-8033-9a71e2d39f12.png" },
+    { name: "ICICI Bank", logo: "/lovable-uploads/e9cbca5a-56f3-49c4-a00e-c276c96a8038.png" },
+    { name: "Qualitest", logo: "/lovable-uploads/3d511f04-96bf-4935-8d1c-61cc117a0497.png" },
+    { name: "Website Toolbox", logo: "/lovable-uploads/fbea0886-dee2-47fe-8747-f8649bc9763c.png" },
+    { name: "Shimply", logo: "/lovable-uploads/d093b5ac-4d5d-4427-84eb-e242b3dd7588.png" },
+  ];
+  
   return (
     <section 
       id="hero" 
@@ -49,7 +59,7 @@ const Hero = () => {
                 Lead Product Designer
               </span>
               
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-none animate-fade-in whitespace-nowrap" style={{ animationDelay: '0.5s' }}>
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-none animate-fade-in" style={{ animationDelay: '0.5s' }}>
                 <span className="parallax-title">Manish Kumar</span>
               </h1>
             </div>
@@ -60,30 +70,20 @@ const Hero = () => {
                   Crafting user-centric digital experiences with 8+ years of expertise in UX strategy, research, and interaction design.
                 </p>
               </div>
-              
-              <div className="flex flex-col sm:flex-row gap-6 animate-fade-up" style={{ animationDelay: '0.9s' }}>
-                <a 
-                  href="#about" 
-                  className="group inline-flex items-center text-gray-800 hover:text-gray-600 transition-colors duration-300"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  <span className="mr-2">Learn more</span>
-                  <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-                </a>
-                
-                <a 
-                  href="#contact" 
-                  className="px-6 py-3 border border-gray-800/20 rounded-lg text-gray-800 font-medium transition-all hover:bg-gray-800 hover:text-white duration-300"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  Get in touch
-                </a>
+            </div>
+            
+            <div className="mt-12 animate-fade-up" style={{ animationDelay: '0.9s' }}>
+              <h3 className="text-lg font-medium text-gray-800 mb-4">Companies I have worked with</h3>
+              <div className="flex flex-wrap gap-6 items-center">
+                {companies.map((company, index) => (
+                  <div key={index} className="flex-shrink-0">
+                    <img 
+                      src={company.logo} 
+                      alt={`${company.name} logo`} 
+                      className="h-10 w-auto object-contain"
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>
