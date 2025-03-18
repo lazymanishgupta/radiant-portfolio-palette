@@ -27,15 +27,15 @@ const Hero = () => {
     return () => window.removeEventListener('scroll', handleParallax);
   }, []);
   
-  // Reversed the order of companies as requested
+  // Moving EY company logo to the end of the array
   const companies = [
     { name: "Shimply", logo: "/lovable-uploads/d093b5ac-4d5d-4427-84eb-e242b3dd7588.png" },
     { name: "Website Toolbox", logo: "/lovable-uploads/fbea0886-dee2-47fe-8747-f8649bc9763c.png" },
     { name: "Qualitest", logo: "/lovable-uploads/3d511f04-96bf-4935-8d1c-61cc117a0497.png" },
     { name: "ICICI Bank", logo: "/lovable-uploads/e9cbca5a-56f3-49c4-a00e-c276c96a8038.png" },
     { name: "IDFC First Bank", logo: "/lovable-uploads/ed2533d5-42be-48eb-8033-9a71e2d39f12.png" },
-    { name: "EY", logo: "/lovable-uploads/ff840849-8cc1-4e91-a28c-c575b485eaea.png" },
     { name: "Air India", logo: "/lovable-uploads/b0aed015-7aea-474a-9d1b-d9f64532d901.png" },
+    { name: "EY", logo: "/lovable-uploads/ff840849-8cc1-4e91-a28c-c575b485eaea.png" },
   ];
   
   return (
@@ -73,7 +73,7 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="mt-8 animate-fade-up" style={{ animationDelay: '0.9s' }}>
+            <div className="mt-12 animate-fade-up" style={{ animationDelay: '0.9s' }}>
               <h3 className="text-sm font-medium text-gray-300 mb-3">Companies I have worked with</h3>
               <div className="grid grid-cols-3 md:grid-cols-4 gap-4 md:gap-6">
                 {companies.map((company, index) => (
