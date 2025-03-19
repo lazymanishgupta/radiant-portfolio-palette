@@ -49,8 +49,8 @@ const Hero = () => {
                 Lead Product Designer
               </span>
               
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-none animate-fade-in" style={{ animationDelay: '0.5s' }}>
-                <span className="parallax-title whitespace-nowrap">Manish Kumar</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-none animate-fade-in" style={{ animationDelay: '0.5s' }}>
+                <span className="parallax-title whitespace-nowrap">Hey! I'm Manish Kumar 👋🏼</span>
               </h1>
             </div>
             
@@ -62,7 +62,7 @@ const Hero = () => {
               </div>
             </div>
             
-            <div className="mt-12 animate-fade-up" style={{ animationDelay: '0.9s' }}>
+            <div className="mt-16 animate-fade-up" style={{ animationDelay: '0.9s' }}>
               <h3 className="text-sm font-medium text-gray-300 mb-3">Companies I have worked with</h3>
               <div className="flex justify-start">
                 <div className="bg-[#161b2b] p-4 rounded-lg">
