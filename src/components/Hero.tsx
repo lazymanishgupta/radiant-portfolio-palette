@@ -50,7 +50,9 @@ const Hero = () => {
               </span>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-none animate-fade-in" style={{ animationDelay: '0.5s' }}>
-                <span className="parallax-title whitespace-nowrap">Hey! I'm Manish Kumar 👋🏼</span>
+                <span className="parallax-title whitespace-nowrap">
+                  <span className="font-normal">Hey! I'm</span> Manish Kumar 👋🏼
+                </span>
               </h1>
             </div>
             
