@@ -67,7 +67,7 @@ const Hero = () => {
               <div className="flex justify-start">
                 <div className="bg-[#161b2b] p-4 rounded-lg">
                   <img 
-                    src="/lovable-uploads/15957061-bf8d-49cb-b970-8e033a3e1b7a.png" 
+                    src="/lovable-uploads/a234ee64-2794-4ac2-a5d3-3098745d836c.png" 
                     alt="Companies I worked with" 
                     className="w-full max-w-md object-contain"
                   />
