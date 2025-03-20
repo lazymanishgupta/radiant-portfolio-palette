@@ -57,7 +57,7 @@ const Hero = () => {
             <div className="mt-16 animate-fade-up" style={{
             animationDelay: '0.9s'
           }}>
-              <h3 className="text-sm font-medium text-gray-300 mb-3">Companies I have worked with</h3>
+              <h3 className="text-sm font-medium text-gray-300 mb-3">Companies I've worked with</h3>
               <div className="flex justify-start">
                 <div className="p-4 rounded-lg px-0 bg-transparent">
                   <img src="/lovable-uploads/a234ee64-2794-4ac2-a5d3-3098745d836c.png" alt="Companies I worked with" className="w-full max-w-md object-contain" />
