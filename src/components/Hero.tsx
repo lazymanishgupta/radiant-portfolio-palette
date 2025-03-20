@@ -57,7 +57,7 @@ const Hero = () => {
             <div className="grid md:grid-cols-1 gap-8 md:gap-12">
               <div className="animate-fade-up" style={{ animationDelay: '0.7s' }}>
                 <p className="text-sm md:text-base text-gray-400 parallax-subtitle">
-                  Crafting user-centric digital experiences with 8+ years of expertise in UX strategy, research, and interaction design.
+                  Lead Product Designer based in Gurgaon with 10+ years of experience in UX strategy, research, and interaction design.
                 </p>
               </div>
             </div>
