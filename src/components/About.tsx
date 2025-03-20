@@ -59,13 +59,13 @@ const About = () => {
           <div className="grid md:grid-cols-12 gap-12 md:gap-16">
             <div className="md:col-span-5 reveal-on-scroll">
               <p className="text-lg mb-6 text-gray-700">
-                I am a Lead Product Designer with over 8 years of experience in crafting intuitive and scalable user experiences. My expertise lies in design strategy, UX research, interaction design, and enterprise solutions across multiple industries, including aviation, finance, e-commerce, and healthcare.
+                My passion for design started in my childhood, inspired by the TV show "Shaka Laka Boom Boom." In the show, a boy could draw anything with his magic pencil, and it would come to life. As a kid, that idea felt crazy and exciting to me—I was fascinated by the power of creating something from imagination and making it real.
               </p>
               <p className="text-lg mb-6 text-gray-700">
-                I specialize in solving complex business challenges by aligning user needs with business goals, ensuring seamless experiences across web and mobile platforms.
+                That curiosity led me to explore design, creativity, and technology, eventually shaping my career as a Product Designer. With 10+ years of experience, I have worked across industries like Aviation, Finance, Healthcare, OTT, and Education, designing user-centric digital experiences that solve real problems.
               </p>
               <p className="text-lg text-gray-700">
-                Passionate about mentoring designers, building scalable design systems, and leveraging data-driven insights, I thrive in dynamic, fast-paced environments.
+                From my early days designing for ICICI Campus Power, EY, Air India, IDFC FIRST Bank, and more, to now leading design teams, my focus has always been on UX strategy, research, and interaction design to build products that are both functional and delightful.
               </p>
             </div>
             
