@@ -44,7 +44,7 @@ const Contact = () => {
       type: "LinkedIn",
       value: "Manish Kumar",
       icon: Linkedin,
-      href: "https://linkedin.com/in/manishkumar"
+      href: "https://www.linkedin.com/in/lazymarkin/"
     },
     {
       type: "Portfolio",

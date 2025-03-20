@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
           
           <div className="flex space-x-4">
-            <a href="https://linkedin.com/in/LazyMarkin" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors">
+            <a href="https://www.linkedin.com/in/lazymarkin/" target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors">
               <Linkedin size={20} />
             </a>
             <a href="mailto:Designermanishk@gmail.com" className="bg-white/10 hover:bg-white/20 p-3 rounded-full transition-colors">
