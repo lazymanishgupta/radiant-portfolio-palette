@@ -45,11 +45,9 @@ const Hero = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="max-w-5xl">
             <div className="flex flex-col gap-3 mb-8">
-              <span className="inline-flex items-center text-sm font-medium text-gray-300 animate-fade-down" style={{ animationDelay: '0.3s' }}>
-                Lead Product Designer
-              </span>
+              {/* Removed "Lead Product Designer" text from here */}
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold tracking-tight leading-none animate-fade-in" style={{ animationDelay: '0.5s' }}>
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold tracking-tight leading-none animate-fade-in" style={{ animationDelay: '0.5s' }}>
                 <span className="parallax-title whitespace-nowrap">
                   <span className="font-normal text-white/80">Hey! I'm</span> Manish Kumar 👋🏼
                 </span>
