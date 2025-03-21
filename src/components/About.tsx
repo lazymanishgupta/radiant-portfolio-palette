@@ -70,7 +70,7 @@ const About = () => {
             </div>
             
             <div className="md:col-span-7">
-              <div className="space-y-6">
+              <div className="space-y-6 max-w-md mx-auto">
                 {philosophyPoints.map((point, index) => (
                   <div 
                     key={index} 
